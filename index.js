@@ -28,11 +28,11 @@ function toggleMute(message, setMute){
         for (const [memberID, member] of channel.members) {
             if (setMute){
                 member.voice.setMute(true);
-                Console.log(member + ' is now muted')
+                console.log(member + ' is now muted')
             }
             else if (!setMute){
                 member.voice.setMute(false);
-                Console.log(member + ' is now unmuted')
+                console.log(member + ' is now unmuted')
             }
         }
         message.reply(setMute ? 'Everyone is muted!': 'Everyone is unmuted!');
